@@ -9,13 +9,76 @@
 
 <body>
   <h1>User-First Design</h1>
-  <p>
 
+  <h3> 1) As a user, I should be able to make a blog post </h3>
+  <p>
+  To make a blog post, Taliah would log into her account which will take her to the blog feed page that displays the blog posts of people she's following. At the top of the feed, there will be a text box for her to write her blog post. When she clicks the text box, she can write her blog post, if she decides to cancel and not post anything, she can click the cancel button on the bottom of the box. If she's done and would like to publish her post, she can click the publish button. Once her post is published, she is able to view it at the top of her feed since it is the most recent post.
+  </p>
+
+  <h3> 2) As a user, I should be able to delete my posts </h3>
+  <p>
+  To delete one of her posts that she no longer wants to appear on her profile, Taliah would log into her account and navigate to her profile page from clicking on her account icon (her profile photo would serve as the icon) from the navigation bar. There will be a dropdown menu with the Profile and Settings option. She can navigate to her profile page to view all the posts she's published in chronilogical order. Once she finds the post she wants to delete, she can navigate to the top right corner of her posts where there will be a '...' icon. When she clicks the '...' icon, she will see a dropdown menu that has the options: Edit, Settings, and Delete. When she clicks the delete option, there will be a popup form asking "Are you sure you want to remove this post?" with the buttons, Yes and No. If she clicks No, she will be taken back to her profile page with no changes. If she chooses Yes, she will be taken back to her profile and her post should no longer be on the list of posts.
+  </p>
+
+  <h3> 3) As a user, I should be able to edit my profile information </h3>
+  <p>
+  To edit her account, Taliah would log into her account first which takes her to her feed (page that shows blog posts she's following). Taliah can navigate to the Gear icon on the navigation bar which will show the options: Profile, Settings. She clicks on the profile option to view her profile. On the bar displaying her public profile details (number of followers/following, location, and biography), to the very right, there will be an Edit button. Once she clicks the Edit button, the details she's allowed to edit will appear in form-format. There will be a preview button and save button on the top of the page. The preview button will allow her to view what her profile will look like to followers without saving and the save button will save, persist, and display her new changes.
+  </p>
+
+  <h3> 4) As a user, I should be able to search for an account </h3>
+  <p>
+  To find an account, Taliah can navigate to the search bar at the top of the navigation bar to search for another user's account. When she hovers her mouse at the search bar, the cursor should change to a text-cursor. Once clicking the search bar, Taliah can being typing the name or username/handle of the account she's looking for. While she's typing, the search bar should drop down with possible accounts that match her input. If she's done typing and does not see the account she's looking for in the dropdown menu, she can click the search/submit button which takes her to a results page that shows a list of matching accounts or a message "No results found" if no accounts match.
+  </p>
+
+  <h3> 5) As a user, I should be able to view the profile/account of someone I'm following </h3>
+  <p>
+  To view a profile that she's following, Taliah first visits the homepage and logs into her account. She navigates and clicks on her profile photo on the navigation bar at the top of the page. There will be a dropdown menu displaying the Profile and Settings options. On her profile page, she can see her Follower and Following information. She can click her Following button which will show a list of profile pictures with corresponding account names/usernames. She can click on an account to view their profile.
   </p>
 
 
   <h1>Data-First Design</h1>
+  <h3>Resource 1: Blog post feed page</h3>
   <p>
+  The blog post feed page is the initial page after a user logs into their account. The page has a text box to allow the user to write and publish their blog post. <br />
+
+  The blog post table in the database should have columns for unique ID assigned to blog post, username (writer of the post), post title, post content, post date, and foreign keys to other users who liked the post, tagID for the hashtags, and account ID for @mentions used for the post. <br />
+
+  When creating a NEW blog post, there is a form with fields for a TITLE, BODY CONTENT, CANCEL button, PUBLISH button <br />
+
+  When SHOWing the post, the page displays the username and profile photo of the poster, the content of the post, and the option to edit, delete, change privacy settings of the post. <br />
+
+  When displaying the INDEX of the blog post, there is a list of blog posts with corresponding profile photo of the poster, their username, their post, and a LIKE button for other users to 'like' their post. <br />
+
+  </p>
+
+  <h3>Resource 2: Search page</h3>
+  <p>
+  The search bar allows users to search for accounts or hashtags that is present at the top of the page on all pages. When the user submits their search request, they are taken to a results page that displays the usernames and hashtags that match their search input <br />
+
+  The search page searches in the accounts database by name or account name <br />
+
+  The accounts table has User handle-names (unique), display name, email, their profile url, profile photo. <br />
+
+  The hashtag table has unique ID for the tags, and tag-name (text after the #). <br />
+
+  When creating a NEW search, there is a form with a field for the search input. There is a search button that submits the search. <br/>
+
+  When SHOWing the search results, the user can select the account or hashtag that matches their search. The account selected will take the user to that account's profile. The hashtag selected will take the user to a list of blog posts that use the hashtag. <br />
+
+  When displaying the INDEX of the search, the results page renders the list of corresponding matches to the user search input. <br />
+  </p>
+
+  <h3>Resource 3: Creating an Account </h3>
+  <p>
+  Users can create/register their accounts from the homepage. <br />
+
+  The new user enters the user data on a form that translate the data into the Accounts table database. The accounts table has User handle-names (unique), display name, email, their profile url, profile photo. <br />
+
+  The NEW account registration is a form with fields for Unique Handle/username, Display name, email, and an option to upload a profile photo (default photo will be used if nothing is uploaded). The profile url will be rendered with their unqiue username with the website domain. <br />
+
+  The SHOW of the new account is the new users profile page. <br />
+
+  The INDEX of the accounts shows a list of user accounts with their corresponding account data. <br />
 
   </p>
 </body>
